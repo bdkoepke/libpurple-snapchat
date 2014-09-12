@@ -31,6 +31,7 @@ char *snapchat_request_token(const char *auth_token, int timestamp) {
     for (i = 0; i < pattern_length; i++)
       token[i] = pattern[i] == '0' ? first[i] : second[i];
   }
+	free(first), free(second);
   return token;
 }
 
