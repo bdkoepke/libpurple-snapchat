@@ -26,12 +26,12 @@ char *snapchat_request_token(const char *auth_token, int timestamp) {
   }
   char *token;
   {
-    int i, pattern_length = strlen(pattern);
+    int i, pattern_length = (int) strlen(pattern);
     token = malloc(sizeof(char) * pattern_length);
     for (i = 0; i < pattern_length; i++)
       token[i] = pattern[i] == '0' ? first[i] : second[i];
   }
-	free(first), free(second);
+  free(first), free(second);
   return token;
 }
 

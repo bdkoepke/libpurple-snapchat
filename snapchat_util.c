@@ -13,7 +13,7 @@ char *concat(const char *const a, const char *const b) {
 }
 
 char *int_to_str(int i) {
-  char *i_s = malloc(sizeof(char) * ceil(i % 10));
+  char *i_s = malloc((size_t) (sizeof(char) * ceil(i % 10)));
   sprintf(i_s, "%d", i);
   return i_s;
 }

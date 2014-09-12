@@ -5,9 +5,11 @@ typedef struct snapchat_login_request_t {
   const char *const username;
   snapchat_request_t request;
   const char *const password;
-} typedef enum account_type_t {
-  PUBLIC = 0;
-  PRIVATE = 1;
+};
+
+typedef enum account_type_t {
+  PUBLIC = 0,
+  PRIVATE = 1
 };
 
 typedef struct snapchat_friend_t {
@@ -17,8 +19,8 @@ typedef struct snapchat_friend_t {
 };
 
 typedef enum snapchat_id_t {
-  TO = 'r';
-  FROM = 's';
+  TO = 'r',
+  FROM = 's'
 };
 
 typedef struct snapchat_snaps_t {
@@ -35,6 +37,6 @@ typedef struct snapchat_snaps_t {
 typedef struct snapchat_friends_t {
   bool can_see_custom_stories;
   snapchat_friend_t friend;
-}
+};
 
 #endif

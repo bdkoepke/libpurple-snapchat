@@ -3,6 +3,8 @@
 #include <stdlib.h>
 #include <string.h>
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 char *snapchat_sha256(const char *string) {
   SHA256_CTX *sha256 = malloc(sizeof(SHA256_CTX));
   SHA256_Init(sha256);
@@ -20,3 +22,4 @@ char *snapchat_sha256(const char *string) {
 
   return digest_hex[sizeof_digest_hex] = '\n', digest_hex;
 }
+#pragma clang diagnostic pop

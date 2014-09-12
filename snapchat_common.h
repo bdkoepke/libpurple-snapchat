@@ -12,21 +12,21 @@ typedef struct snapchat_responses {
 };
 
 typedef enum snapchat_media_types {
-  IMAGE = 0;
-  VIDEO = 1;
-  VIDEO_NOAUDIO = 2;
-  FRIEND_REQUEST = 3;
-  FRIEND_REQUEST_IMAGE = 4;
-  FRIEND_REQUEST_VIDEO = 5;
-  FRIEND_REQUEST_VIDEO_NOAUDIO = 6;
+  IMAGE = 0,
+  VIDEO = 1,
+  VIDEO_NOAUDIO = 2,
+  FRIEND_REQUEST = 3,
+  FRIEND_REQUEST_IMAGE = 4,
+  FRIEND_REQUEST_VIDEO = 5,
+  FRIEND_REQUEST_VIDEO_NOAUDIO = 6
 };
 
 typedef enum snapchat_media_states {
-  NONE = -1;
-  SENT = 0;
-  DELIVERED = 1;
-  VIEWED = 2;
-  SCREENSHOT = 3;
+  NONE = -1,
+  SENT = 0,
+  DELIVERED = 1,
+  VIEWED = 2,
+  SCREENSHOT = 3
 };
 
 const char *const snapchat_fallback_build_version = "3.0.2";
