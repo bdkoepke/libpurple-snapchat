@@ -1,9 +1,11 @@
 cmake_minimum_required(VERSION 2.8)
 
+set(MATH_LINK_FLAGS
+    "-lm")
 set(SSL_LINK_FLAGS
     "-lssl -lcrypto")
 set(CMAKE_EXE_LINKER_FLAGS
-    "${CMAKE_EXE_LINKER_FLAGS} ${SSL_LINK_FLAGS}")
+    "${CMAKE_EXE_LINKER_FLAGS} ${SSL_LINK_FLAGS} ${MATH_LINK_FLAGS}")
 
 set(snapchat_SRCS
     snapchat.c

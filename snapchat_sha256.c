@@ -12,6 +12,7 @@ char *snapchat_sha256(const char *string) {
 
   unsigned char *digest = malloc(sizeof(unsigned char) * SHA256_DIGEST_LENGTH);
   SHA256_Final(digest, sha256);
+  free(sha256);
 
   const int sizeof_digest_hex = sizeof(char) * (SHA256_DIGEST_LENGTH * 2);
   char *digest_hex = malloc(sizeof_digest_hex + sizeof('\n'));
