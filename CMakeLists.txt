@@ -1,11 +1,10 @@
 cmake_minimum_required(VERSION 2.8)
 
-set(MATH_LINK_FLAGS
-    "-lm")
-set(SSL_LINK_FLAGS
-    "-lssl -lcrypto")
-set(CMAKE_EXE_LINKER_FLAGS
-    "${CMAKE_EXE_LINKER_FLAGS} ${SSL_LINK_FLAGS} ${MATH_LINK_FLAGS}")
+FIND_PACKAGE(OpenSSL REQUIRED)
+
+include_directories(OPENSSL_INCLUDE_DIR)
+link_directories(${OPENSSL_LIBRARIES})
+add_definitions()
 
 set(snapchat_SRCS
     snapchat.c
@@ -14,4 +13,4 @@ set(snapchat_SRCS
 
 add_executable(snapchat ${snapchat_SRCS})
 
-target_link_libraries(snapchat)
+target_link_libraries(snapchat m crypto)
